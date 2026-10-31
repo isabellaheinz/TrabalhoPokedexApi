@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" href="Assets/Imagens/pokemon-go.png">
+   
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+    </style>
+
+</head>
+
+<body>
+
+    <header class="intro">
+        <img src="Assets/Imagens/1.png" alt="">
+    </header>
+
+    <div class="principal">
+        <div class="container ">
+
+
+            <form action="">
+                <h3 class="fonteTexto">Qual pokemon você deseja buscar?</h3>
+                <input class="fonteTexto" id="Buscar" type="text" value=""
+                placeholder="Digite o nome ou id do pokemon:">
+                <span class="fonteTexto" id="spanErro"></span>
+                <button class="fonteTexto" id="BotaoBuscar">Buscar</button>
+            </form>
+
+            <div class="opcoes">
+
+                <h3 class="fonteTexto">Outras Opções</h3>
+                <button id="BuscarAleatorio" class="fonteTexto">Buscar pokemon aleatório</button>
+                <button id="proximo" class="fonteTexto">Ir para o próximo pokemon</button>
+                <button id="anterior" class="fonteTexto">Voltar para o pokemon anterior</button>
+            </div>
+        </div>
+
+
+        <section id="resultado">
+
+            <div class="ladoEsquerdo">
+                <img id="FotoPokemon" src="https://wallpapers.com/images/featured/branco-em-branco-7sn5o1woonmklx1h.jpg" alt=" ">
+                <div class="baixo">
+                    <div class="indentificacao">
+                        <h2 class="fonteTexto" id="tituloPokemon">Pokemon</h2>
+                        <h2 class="fonteTexto" id="idPokemon">#Id</h2>
+                    </div>
+                    <button id="modoShinny" class="fonteTexto">Shiny</button>
+                </div>
+                
+            </div>
+
+            <div class="ladoDireito fonteTexto">
+                
+                <h4 id="tipoPokemon">Tipo: </h4>
+            
+                <h4 id="alturaPokemon">Altura: </h4>
+            
+                <h4 id="pesoPokemon">Peso: </h4>
+                
+
+                <div class="tituloAtributos">
+                    <div class="linha"></div>
+                    <h3>Atributos</h3>
+                    <div class="linha"></div>
+                </div>
+
+                <div class="atributos">
+
+                    <div class="atrEsquerdo">
+
+                        <div class="atributoCont">
+                            <h4 id="ataquePokemon">Ataque: </h4>
+                            <div class="barraFundo">
+                                <div id="barraAtaque" class="barraPreenchida"></div>
+                            </div>
+                        </div>
+
+                        <div class="atributoCont">
+                            <h4 id="defesaPokemon">Defesa: </h4>
+                            <div class="barraFundo">
+                                <div id="barraDefesa" class="barraPreenchida"></div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="atrDireito">
+
+                        <div class="atributoCont">
+                            <h4 id="hpPokemon">HP: </h4>
+                            <div class="barraFundo">
+                                <div id="barraHp" class="barraPreenchida"></div>
+                            </div>
+                        </div>
+
+                        <div class="atributoCont">
+                            <h4 id="velocidadePokemon">Velocidade: </h4>
+                            <div class="barraFundo">
+                                <div id="barraVelocidade" class="barraPreenchida"></div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </div>
+
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

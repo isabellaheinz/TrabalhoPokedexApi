@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fonteTexto {
+    font-family: "Cousine", monospace;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.intro {
+    width: 100%;
+    height: 600px;
+
+    background-image: url(Assets/Imagens/2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.intro img {
+    width: 70%;
+    margin-left: 15%;
+    height: 500px;
+}
+
+.principal {
+
+    width: 90%;
+    height: 600px;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.container {
+    margin-top: 70px;
+    width: 30%;
+    height: 500px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container form {
+    height: 150px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#Buscar {
+    padding: 10px 20px;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.547);
+    transition: all 0.3s;
+}
+
+#Buscar[type="text"]:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px gray;
+}
+
+#BotaoBuscar {
+    margin-left: 15%;
+    margin-top: -2%;
+}
+
+button:not(#modoShinny) 
+{
+    width: 60%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.547);
+    background-color: rgb(255, 170, 0);
+    border: 3px solid rgb(6, 60, 255);
+    transition: all 0.3s;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(255, 153, 0);
+    box-shadow: 0px 0px 5px gray;
+
+}
+
+.container .opcoes {
+    margin-top: 40px;
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#resultado {
+    width: 65%;
+    height: 500px;
+    background-image: url(Assets/Imagens/PokeDigital.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#resultado .ladoEsquerdo {
+
+    width: 47%;
+    height: 330px;
+    margin-top: 60px;
+}
+
+#FotoPokemon {
+    width: 70%;
+    margin-top: 30px;
+    height: 220px;
+    margin-left: 15%;
+    border: 4px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px gray;
+    transition: all 0.3s;
+}
+
+#FotoPokemon:hover {
+     transform: translateY(-4px);
+     cursor: pointer;
+     box-shadow: 0px 0px 5px rgb(105, 104, 104);
+
+}
+
+
+#resultado .ladoEsquerdo .baixo {
+    margin-left: 15%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between ;
+}
+
+#modoShinny {
+    height: 30px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.547);
+    background-color: rgb(255, 170, 0);
+    border: 3px solid rgb(6, 60, 255);
+    transition: all 0.3s;
+}
+
+#modoShinny:hover {
+    cursor: pointer;
+    background-color: rgb(255, 153, 0);
+    box-shadow: 0px 0px 5px gray;
+}
+
+#resultado .ladoDireito {
+
+    width: 47%;
+    height: 300px;
+    margin-top: 60px;
+    padding-top: 30px;
+
+}
+
+#resultado .ladoDireito .transLinha {
+    display: flex;
+}
+
+#resultado .ladoDireito h4 {
+    padding: 5px;
+}
+
+#resultado .ladoDireito .tituloAtributos {
+    margin-top: 20px;
+    display: flex;
+    gap: 25px;
+
+}
+
+#resultado .ladoDireito .linha {
+    width: 125px;
+    height: 3px;
+    margin-top: 10px;
+    background-color: black;
+}
+
+.styleSpanErro {
+    color: rgb(232, 0, 0);
+    font-size: 15px;
+}
+
+
+.atributoCont {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.atributoCont .barraFundo {
+    margin-top: 9px;
+    margin-right: 30px;
+}
+
+.barraFundo {
+    width: 250px;
+    height: 15px;
+    background-color: #b4b4b4;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.barraPreenchida {
+    height: 100%;
+    width: 0%;
+    background-color: #00ff08;
+    transition: width 0.4s ease-in-out;
+}
+
+#resultado.normal #FotoPokemon {
+    border-color: #A8A878;
+}
+
+#resultado.normal .barraPreenchida {
+    background-color: #A8A878;
+}
+
+#resultado.fire #FotoPokemon {
+    border-color: #F08030;
+}
+
+#resultado.fire .barraPreenchida {
+    background-color: #F08030;
+}
+
+#resultado.water #FotoPokemon {
+    border-color: #6890F0;
+}
+
+#resultado.water .barraPreenchida {
+    background-color: #6890F0;
+}
+
+#resultado.electric #FotoPokemon {
+    border-color: #F8D030;
+}
+
+#resultado.electric .barraPreenchida {
+    background-color: #F8D030;
+}
+
+#resultado.grass #FotoPokemon {
+    border-color: #78C850;
+}
+
+#resultado.grass .barraPreenchida {
+    background-color: #78C850;
+}
+
+#resultado.ice #FotoPokemon {
+    border-color: #98D8D8;
+}
+
+#resultado.ice .barraPreenchida {
+    background-color: #98D8D8;
+}
+
+#resultado.fighting #FotoPokemon {
+    border-color: #C03028;
+}
+
+#resultado.fighting .barraPreenchida {
+    background-color: #C03028;
+}
+
+#resultado.poison #FotoPokemon {
+    border-color: #A040A0;
+}
+
+#resultado.poison .barraPreenchida {
+    background-color: #A040A0;
+}
+
+#resultado.ground #FotoPokemon {
+    border-color: #E0C068;
+}
+
+#resultado.ground .barraPreenchida {
+    background-color: #E0C068;
+}
+
+#resultado.flying #FotoPokemon {
+    border-color: #A890F0;
+}
+
+#resultado.flying .barraPreenchida {
+    background-color: #A890F0;
+}
+
+#resultado.psychic #FotoPokemon {
+    border-color: #F85888;
+}
+
+#resultado.psychic .barraPreenchida {
+    background-color: #F85888;
+}
+
+#resultado.bug #FotoPokemon {
+    border-color: #A8B820;
+}
+
+#resultado.bug .barraPreenchida {
+    background-color: #A8B820;
+}
+
+#resultado.rock #FotoPokemon {
+    border-color: #B8A038;
+}
+
+#resultado.rock .barraPreenchida {
+    background-color: #B8A038;
+}
+
+#resultado.ghost #FotoPokemon {
+    border-color: #705898;
+}
+
+#resultado.ghost .barraPreenchida {
+    background-color: #705898;
+}
+
+#resultado.dragon #FotoPokemon {
+    border-color: #7038F8;
+}
+
+#resultado.dragon .barraPreenchida {
+    background-color: #7038F8;
+}
+
+#resultado.dark #FotoPokemon {
+    border-color: #705848;
+}
+
+#resultado.dark .barraPreenchida {
+    background-color: #705848;
+}
+
+#resultado.steel #FotoPokemon {
+    border-color: #B8B8D0;
+}
+
+#resultado.steel .barraPreenchida {
+    background-color: #B8B8D0;
+}
+
+#resultado.fairy #FotoPokemon {
+    border-color: #EE99AC;
+}
+
+#resultado.fairy .barraPreenchida {
+    background-color: #EE99AC;
+}
+
+
+footer {
+
+    width: 100%;
+    height: 400px;
+    background-image: url(Assets/Imagens/Footer.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
